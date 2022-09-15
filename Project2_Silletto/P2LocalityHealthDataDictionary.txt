@@ -1,0 +1,51 @@
+*** Data Dictionary from the 2019 CDC 500 Cities Project: Local Data for Better Health
+ and Census American Community Survey (5-year) ***
+ 
+*** PlacesHealthLocalities.json
+*** Compiled by WM Harris (March 2022) for IGME-102
+
+SOURCES:
+* CDC 500 Cities Project: Local Data for Better Health https://www.cdc.gov/places 
+https://chronicdata.cdc.gov/api/views/6vp6-wxuq/rows.csv?accessType=DOWNLOAD
+
+* 2019 Census demographic data for every US locality (county, parish, etc.)
+https://api.census.gov/data/2019/acs/acs5?get=B01001_001E,B03002_003E,B19013_001E,B19123_002E,NAME&for=county:*
+
+JSON OBJECT PROPERTIES of 3143 Localities *************************** 
+localities[0] is the United States
+
+	*** Properties from the CENSUS Data Source
+	
+	["population"]	Total census population 
+	["white"]		White, non-Hispanic/Latino census population
+	["medianIncome"]	Median household income
+	["assisted"]	Census population with cash public assistance income
+					 or in households receiving Food Stamps/SNAP benefits
+	["name"]		Locality (county, parish, etc.) name
+	["stateId"] 	State ID
+	["id"] 			Locality ID
+	["state"]		State name
+	
+	*** Properties from the CDC Data Source
+	
+	["popStudied"]	Total CDC study population: range 86 to 10039107 (excl. "United States")
+    ["lon"]			Locality longitude: range -164.033 to -67.629	
+    ["lat"]			Locality latitude: range 69.312 to 19.601
+    
+    ["outcomes"]	(object of up to 13 poor Health Outcome measures)
+    				https://www.cdc.gov/places/measure-definitions/health-outcomes
+    	Measure identifier : Age-adjusted prevalence in CDC study population
+    				 		
+    	
+	["preventions"]	(object of up to 9 Prevention measures) 
+    				https://www.cdc.gov/places/measure-definitions/prevention
+    	Measure identifier : Age-adjusted prevalence in CDC study population
+    	
+	["risks"]		(object of up to 4 Health Risk Behavior measures)
+    				https://www.cdc.gov/places/measure-definitions/unhealthy-behaviors
+    	Measure identifier : Age-adjusted prevalence in CDC study population
+    	
+    ["statuses"]	(object of up to 3 poor Health Status measures)
+    				https://www.cdc.gov/places/measure-definitions/health-status
+    	Measure identifier : Age-adjusted prevalence in CDC study population
+    	
