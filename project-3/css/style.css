@@ -1,0 +1,18 @@
+body{
+    cursor: url(images/move.png) 8 8,crosshair;
+    margin: 0;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer p{
+    font-size: 18px;
+}

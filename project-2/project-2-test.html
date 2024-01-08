@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 Test</title>
+</head>
+<body>
+    <div id="data"></div>
+
+    <script>
+                
+        function getData(url){
+
+        let xhr = new XMLHttpRequest();
+
+        xhr.onload = dataLoaded;
+        xhr.onerror = dataError;
+
+        xhr.open("GET",url);
+        xhr.send();
+        }
+
+        // Callback Functions
+
+        function dataLoaded(e){
+
+            let xhr = e.target;
+            console.log(xhr);
+
+            let para = document.createElement("p");
+
+            para.innerHTML = xhr.responseText;
+
+            document.getElementById("data").appendChild(para);
+        }
+
+        function dataError(e){
+
+        console.log("An error occurred");
+        }
+
+        // data retrieval
+
+        const DND_URL = "https://api.open5e.com/v1/";
+
+        let url = DND_URL;
+        
+        url += "classes/?name=Wizard";
+
+        console.log(url);
+
+        getData(url);
+
+    </script>
+
+</body>
+
+</html>

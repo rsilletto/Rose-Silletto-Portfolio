@@ -1,0 +1,81 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: red;
+    font-size: 60px;
+}
+
+main{
+    grid-area: "content";
+    background-color: antiquewhite;
+    padding: 1.5em;
+}
+
+#intro{
+    font-size: 18px;
+}
+
+sidebar{
+    grid-area: "sidebar";
+}
+
+#wrapper{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 2fr 10fr 2fr 1fr;
+    grid-template-areas: "header" "navbar" "content" "sidebar" "footer";
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media screen and (min-width: 760px){
+    #wrapper{
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-columns: 10% auto 10%;
+        grid-template-areas: "header header header"
+                            "navbar content sidebar" 
+                            "footer footer footer";
+    }
+    main{
+        border-radius: 25px;
+    }
+}
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    grid-area: navbar;
+}
+aside{
+    grid-area: sidebar;
+}
+footer{
+    grid-area: footer;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    border-color: black;
+    border-radius: 20px;
+}
+button{
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    border-color: black;
+    font-size: 16px;
+}
+
+div#gen {
+    display: flex;
+}
+
+div#gen div{
+    padding: 10px;
+}
