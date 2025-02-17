@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- A-Frame -->
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <!-- we use three.js to handle raycasting -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex.js"></script>
+  <!-- AR.js A-Frame components -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script>
+    let count = 0;
+    AFRAME.registerComponent('clicker', {
+          init: function() {
+              this.el.addEventListener('click', e => {
+                count++;
+                  // alert('you have clicked me ' + count + ' times!!');
+                  alert('Zorua - National Dex #0570 \nTo protect themselves from danger, they hide their true identities by transforming into people and Pokémon.');
+              });
+          }
+      });
+  </script>
+  <title>Silletto Minor Project</title>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled: false;" raycaster cursor="rayOrigin: mouse;" renderer="antialias: true; alpha: true;">
+        <!-- <a-marker preset="hiro"> -->
+        <a-entity
+            scale="0.8 0.8 0.8"
+            position="3 0 0"
+            rotation="0 -90 0"
+            gps-entity-place="latitude: 43.09162; longitude: -77.659489;"
+            event-set__1="_event: click; 
+                attribute="rotation dur='5000' repeat='0' to='0 90 0'
+            gltf-model="zorua/scene.gltf"
+            clicker
+        ></a-entity>
+        <!-- <a-camera gps-new-camera="gpsMinDistance: 5"></a-camera> -->
+        <!-- </a-marker> -->
+        <a-camera gps-camera></a-camera>
+    </a-scene>
+  </body>
+</html>

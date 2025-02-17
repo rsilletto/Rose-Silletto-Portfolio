@@ -1,0 +1,11 @@
+Model Information:
+* title:	tbh creature
+* source:	https://sketchfab.com/3d-models/tbh-creature-f9e56ef30d974c30b7eb54e050eab220
+* author:	Jekyre3D (https://sketchfab.com/jekyre3d)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "tbh creature" (https://sketchfab.com/3d-models/tbh-creature-f9e56ef30d974c30b7eb54e050eab220) by Jekyre3D (https://sketchfab.com/jekyre3d) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
